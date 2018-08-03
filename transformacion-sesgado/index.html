@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transformción translate</title>
+	<style>
+		body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			color: white;
+			font-family: Arial;
+			
+			/*perspective-origin: x y; */
+			
+		}
+		.container{
+			border: 1px solid red;
+			perspective: 200px;
+			/*perspective-origin: top;*/
+			/*perspective-origin: top;*/
+			/*perspective: bottom;*/
+		}
+		
+		.container:hover .cuadrado{
+			/*transform: skew(x,y);*/
+			/*transform: skew(45deg, 45deg);*/
+			transform: skew(45deg, 10deg);
+
+		}
+
+		.cuadrado{
+
+			width: 200px;
+			height: 200px;
+			background: #7dc900;
+			margin: 20px;
+			transition: 1s;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="cuadrado">Hola Mundo</div>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Interacción</title>
+	<style>
+	body{
+		display: flex;
+		height: 100vh;
+		align-items: center;
+		/* justify-content: center; */
+	}
+		.pelota{
+			height: 100px;
+			width: 100px;
+			border-radius: 50%;
+			/*background: red;*/
+			/*transition-property: width;*/
+			/*transition-duration: 1s;*/
+			/*transition-delay: 1s;*/
+			/*transition-timing-function: ease;*/
+			transition: 1s;
+			position: absolute;
+			display: flex;
+			align-items: center; /*alineado vertical*/
+			justify-content: center; /* alineación horizontal */
+			color: white;
+		}
+
+		.pelota.a{
+			background: red;
+			left: 0;
+		}
+		.pelota.b{
+			background: blue;
+			right: 0;
+		}
+
+		.canasta{
+			border: 1px solid red;
+			position: relative;
+			height: 100px;
+			width: 100%;
+			transform: rotate(5deg) skew(10deg) translate(100px) scale(1.5);
+		}
+		.canasta:hover .pelota.a{
+			left: calc(50% - 100px); /*ya que al mover el elemento 50% este hay q restarle el su hancho*/
+		}
+		.canasta:hover .pelota.b{
+			right: calc(50% - 100px);
+
+		}
+	</style>
+</head>
+<body>
+	<div class="canasta">
+		<div class="pelota a">Hola</div>
+		<div class="pelota b">Mundo</div>
+	</div>
+</body>
+</html>
